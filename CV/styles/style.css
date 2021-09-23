@@ -1,0 +1,7 @@
+#infos{
+  display: flex;
+  flex-direction: row;
+}
+#foto {
+  text-align: left;
+}
