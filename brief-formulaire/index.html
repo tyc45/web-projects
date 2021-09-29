@@ -11,11 +11,11 @@
     <fieldset>
       <legend><h3>Informations personnelles</h3></legend>
       <label for="nom">Nom:</label><br>
-      <input type="text" id="nom" name="nom_util" required>
+      <input type="text" id="nom" name="nom_util" pattern="[a-zA-Z]+" required>
       <br><br>
 
       <label for="prenom">Prénom:</label><br>
-      <input type="text" id="prenom" name="prenom_util" required>
+      <input type="text" id="prenom" name="prenom_util" pattern="[a-zA-Z]+" required>
       <br><br>
 
       <label for="age">Age:</label><br>
@@ -47,7 +47,21 @@
       <input type="text" id="ville" name="ville_util" required>
       <br><br>
       <label for="metier">Métier exercé:</label><br>
-      <input type="text" id="metier" name="metier_util" required>
+      <select id="metier" name="metier_util">
+        <option value="management">Management, Pilotage et Contrôle</option>
+        <option value="libraries">Bibliothèques, Documentation, Archives et Musées</option>
+        <option value="health">Santé-Social</option>
+        <option value="policies">Etudes et Evaluation des Politiques Publiques</option>
+        <option value="humans">Ressources Humaines</option>
+        <option value="finances">Gestion budgétaire, Finances et Comptable</option>
+        <option value="affairs">Affaires Juridiques</option>
+        <option value="administration">Administration Générale</option>
+        <option value="logistic">Logistique Immobilière, Technique et de Services</option>
+        <option value="systems">Systèmes et Réseaux d’Information et de Communication</option>
+        <option value="communication">Communication - Edition</option>
+        <option value="unemployed">Sans Emploi</option>
+        <option value="student">Etudiant</option>
+      </select>
     </fieldset>
     <fieldset>
       <legend><h3>Naissance</h3></legend>
@@ -580,7 +594,7 @@
       <br><br>
 
       <label for="num_passeport">Numéro du passeport:</label><br>
-      <input type="text" id="num_passeport" name="num_passeport_util" minlength="9" maxlength="9" required>
+      <input type="text" id="num_passeport" name="num_passeport_util" minlength="9" maxlength="9" pattern="[a-zA-Z0-9]+" required>
       <br><br>
 
       <label for="deliv_passeport">Date de délivrance du passeport:</label><br>
