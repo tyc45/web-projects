@@ -1,4 +1,2 @@
-function alert1(){
-  const EARTH;
-  let currentUser;
-}
+let userName = prompt("What's your name?");
+alert(`You are ${userName}, welcome!`);
