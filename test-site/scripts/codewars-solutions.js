@@ -38,3 +38,27 @@ function toFreud(string) {
   }
 return result;
 }
+
+
+// Getting the square's area from a circle arc
+
+function squareArea(A){
+  let result = ((4 * A) / (2 * Math.PI)) ** 2;
+  return (Math.round(result * 100) / 100);
+}
+
+
+// Multiplication table generator
+
+function multiTable(n) {
+  let table = "";
+  for(let i = 1; i <= 10; i++){
+    if(table){
+      table += "\n" + i + " * " + n + " = " + (i * n);
+    }
+    else{
+      table += i + " * " + n + " = " + (i * n);
+    }
+  }
+  return table;
+}
