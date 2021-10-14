@@ -89,3 +89,20 @@ function fixTheMeerkat(arr) {
  let result = [arr[2], arr[1], arr[0]];
   return (result);
 }
+
+
+// A stupid batch of code for writing: return n ** 3  ◔_◔ 
+
+function rowSumOddNumbers(n) {
+  let count = 1;
+  let result = [];
+  for(i = 1; i <= n; i++){
+    let currentRowSum = 0;
+    for(j = 0; j < i; j++){
+      currentRowSum += count;
+      count += 2;
+    }
+    result.unshift(currentRowSum);
+  }
+  return result[0];
+}
