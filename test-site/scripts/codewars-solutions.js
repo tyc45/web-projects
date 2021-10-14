@@ -74,3 +74,18 @@ function boolToWord( bool ){
 function century(year) {
   return (Math.trunc((year -1) / 100 + 1) );
 }
+
+
+// Return the area of a square or the perimeter of a rectangle
+
+function areaOrPerimeter(l , w) {
+  return (l != w) ? (l + w) * 2 : l ** 2;
+}
+
+
+// Something about reversed animals
+
+function fixTheMeerkat(arr) {
+ let result = [arr[2], arr[1], arr[0]];
+  return (result);
+}
