@@ -91,7 +91,7 @@ function fixTheMeerkat(arr) {
 }
 
 
-// A stupid batch of code for writing: return n ** 3  ◔_◔ 
+// A stupid batch of code for writing: return n ** 3  ◔_◔
 
 function rowSumOddNumbers(n) {
   let count = 1;
@@ -105,4 +105,48 @@ function rowSumOddNumbers(n) {
     result.unshift(currentRowSum);
   }
   return result[0];
+}
+
+
+// Getting the sum of all Integers in an interval
+
+
+function getSum( a,b )
+{
+   return ((Math.abs(a - b) + 1) * (a + b))/2;
+}
+
+
+// A function that returns the difference between 2 numbers
+
+function difference(a, b){
+  return Math.abs(a - b);
+}
+
+
+// A function that tells if a number is jumping or not
+
+function jumpingNumber(n){
+  let arr = n.toString().split('')
+  for(i=0; i < arr.length-1; i++){
+    if(Math.abs(arr[i] - arr[i+1]) !== 1 ){
+      return 'Not!!'
+    }
+  }
+  return 'Jumping!!'
+}
+
+
+// Checks for number consisting only of char from 0 to 5
+
+function specialNumber(n){
+  let re = /([6-9])/;
+  return re.exec(n.toString()) ? "NOT!!" : "Special!!";
+}
+
+
+// Tells if a number is Automorphic
+
+function automorphic(n){
+  return (String(n*n).indexOf(String(n)) != -1) ? "Automorphic" : "Not!!";
 }
