@@ -150,3 +150,36 @@ function specialNumber(n){
 function automorphic(n){
   return (String(n*n).indexOf(String(n)) != -1) ? "Automorphic" : "Not!!";
 }
+
+
+function tidyNumber(n){
+  let stringed = String(n);
+  for(i = 0; i < stringed.length -1; i++){
+    if(stringed.charAt(i) > stringed.charAt(i+1)) return false;
+  }
+  return true;
+}
+
+
+function isPrime(n){
+  for(j = 2; j < n; j++){
+    if(n%j == 0) return false;
+  }
+  return n > 1;
+}
+
+
+// Calculate the primorial of n
+
+function numPrimorial(n){
+  let result = 1;
+  let count = 0;
+
+  for(i = 0; count < n; i++){
+    if(isPrime(i)){
+      result *= i;
+      count++;
+    }
+  }
+  return result;
+}
