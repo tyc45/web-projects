@@ -173,9 +173,8 @@ function isPrime(n){
 
 function numPrimorial(n){
   let result = 1;
-  let count = 0;
 
-  for(i = 0; count < n; i++){
+  for(i = 0, count = 0; count < n; i++){
     if(isPrime(i)){
       result *= i;
       count++;
