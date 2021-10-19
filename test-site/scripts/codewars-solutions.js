@@ -195,7 +195,27 @@ function repeatStr (n, s) {
 }
 
 
-
 function removeChar(str){
  return str.slice(1, str.length -1);
 };
+
+
+function positiveSum(arr) {
+  let result = 0;
+  for(i = 0; i < arr.length; i++)
+    {
+      if(arr[i] > 0) result += arr[i];
+    }
+  return result;
+}
+
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let result = args[0];
+    for(let i = 1; i < args.length; i++){
+      if (args[i] < result) result = args[i];
+    }
+    return result;
+  }
+}
