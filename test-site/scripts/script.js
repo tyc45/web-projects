@@ -1,18 +1,17 @@
-function difference(a, b){
-  return Math.abs(a - b);
-}
-
-function jumpingNumber(n){
-  let stringedN = n.toString();
-  for(i = 0; i < stringedN.length -1; i++){
-    if(difference(stringedN.charAt(i), stringedN.charAt(i+1)) != 1){
-      return "Not!!";
-    }
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+    return this;
   }
-  return "Jumping!!";
-}
+};
 
-//alert(difference(+prompt(`a?`), +prompt(`b?`)));
-
-n = +prompt(`n = ?`);
-alert(jumpingNumber(n));
+ladder.up().up().down().showStep(); // 1

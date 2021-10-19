@@ -182,3 +182,20 @@ function numPrimorial(n){
   }
   return result;
 }
+
+
+// Copies a string s n times
+
+function repeatStr (n, s) {
+  let result = ``;
+  for(i = 0; i < n; i++){
+    result += s;
+  }
+  return result;
+}
+
+
+
+function removeChar(str){
+ return str.slice(1, str.length -1);
+};
