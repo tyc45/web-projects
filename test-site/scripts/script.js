@@ -1,16 +1,23 @@
-function Accumulator(num){
-  this.value = num;
-
-  this.read = function(){
-    this.value += +prompt(`How much do you want to add?`);
+function bubbleSort(arr){
+  let result = arr;
+  for(i = arr.length - 1; i >= 0; i--){
+    let sorted = true;
+    for(j = 0; j < i; j++){
+      if(result[j] > result[j+1]){
+        sorted = false;
+        let temp = result[j];
+        result[j] = result[j+1];
+        result[j+1] = temp;
+      }
+    }
+    if(sorted) return result;
   }
 }
 
 
+let arr = [];
+for(let i = 0; i < 6; i++){
+  arr.push(+prompt("number?"));
+}
 
-let accumulator = new Accumulator(1); // initial value 1
-
-accumulator.read(); // adds the user-entered value
-accumulator.read(); // adds the user-entered value
-
-alert(accumulator.value); // shows the sum of these values
+alert(bubbleSort(arr));
