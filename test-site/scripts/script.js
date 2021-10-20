@@ -1,17 +1,16 @@
-let ladder = {
-  step: 0,
-  up() {
-    this.step++;
-    return this;
-  },
-  down() {
-    this.step--;
-    return this;
-  },
-  showStep: function() { // shows the current step
-    alert( this.step );
-    return this;
-  }
-};
+function Accumulator(num){
+  this.value = num;
 
-ladder.up().up().down().showStep(); // 1
+  this.read = function(){
+    this.value += +prompt(`How much do you want to add?`);
+  }
+}
+
+
+
+let accumulator = new Accumulator(1); // initial value 1
+
+accumulator.read(); // adds the user-entered value
+accumulator.read(); // adds the user-entered value
+
+alert(accumulator.value); // shows the sum of these values
