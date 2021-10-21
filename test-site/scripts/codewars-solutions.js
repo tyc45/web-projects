@@ -236,3 +236,14 @@ function bubbleSort(arr){
     if(sorted) return result;
   }
 }
+
+
+// Lets us know if the sum of elements is even or odd
+
+function oddOrEven(array) {
+   let temp = 0;
+  for(let element of array){
+    temp += element;
+  }
+  return temp % 2 == 0 ? "even" : "odd";
+}
