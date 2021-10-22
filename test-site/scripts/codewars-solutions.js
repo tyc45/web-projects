@@ -247,3 +247,13 @@ function oddOrEven(array) {
   }
   return temp % 2 == 0 ? "even" : "odd";
 }
+
+
+
+function readNumber(){
+  while(true){
+    let result = prompt("gimme a number!", ``);
+    if(parseInt(result)) return result;
+    if(!result) return null;
+  }
+}
